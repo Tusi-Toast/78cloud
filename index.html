@@ -301,63 +301,7 @@
             font-size: clamp(12px, 2.8vw, 14px);
         }
         
-        /* 客服信息 - 响应式调整 */
-        .customer-service {
-            background: var(--surface-color);
-            border-radius: clamp(8px, 2vw, 12px);
-            padding: clamp(18px, 4vw, 25px);
-            margin: clamp(25px, 5vw, 30px) 0;
-            text-align: center;
-            border-left: clamp(3px, 1vw, 4px) solid #ef4444;
-        }
-        
-        .customer-service h3 {
-            color: #ef4444;
-            margin-bottom: clamp(12px, 3vw, 15px);
-            font-size: clamp(18px, 4.2vw, 22px);
-        }
-        
-        .qq-info {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(12px, 3vw, 15px);
-            max-width: min(500px, 90vw);
-            margin: clamp(15px, 3vw, 20px) auto;
-        }
-        
-        .qq-item {
-            display: flex;
-            flex-direction: column;
-            gap: clamp(5px, 1.5vw, 8px);
-            padding: clamp(10px, 2.5vw, 12px) clamp(15px, 3vw, 20px);
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: clamp(6px, 1.5vw, 8px);
-        }
-        
-        @media (min-width: 480px) {
-            .qq-item {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-        
-        .qq-label {
-            font-weight: 600;
-            font-size: clamp(13px, 3vw, 15px);
-        }
-        
-        .qq-number {
-            color: #3b82f6;
-            font-weight: 600;
-            font-size: clamp(13px, 3vw, 15px);
-        }
-        
-        .qq-status {
-            color: #ef4444;
-            font-size: clamp(10px, 2.5vw, 12px);
-            margin-left: clamp(5px, 1vw, 8px);
-        }
+        /* 已删除冗余的 .customer-service 样式 */
         
         /* 价格说明 - 响应式调整 */
         .price-info {
@@ -563,7 +507,7 @@
                 border: 1px solid #ccc !important;
             }
             
-            .contact-section, .customer-service, .price-info, .notice {
+            .contact-section, .price-info, .notice {
                 border: 1px solid #ccc;
                 background: #f9f9f9;
             }
@@ -647,9 +591,9 @@
             </div>
         </section>
 
-        <!-- 联系我们 -->
+        <!-- 联系我们（已合并客服支持） -->
         <section id="contact" class="contact-section">
-            <h2>📞 联系我们</h2>
+            <h2>📞 联系我们 / 客服支持</h2>
             <div class="contact-grid">
                 <div class="contact-item">
                     <span class="icon">👥</span>
@@ -689,32 +633,29 @@
                     <p>反馈云电脑问题或申请在云电脑安装软件</p>
                     <a href="https://pd.qq.com/s/ix4a2jb8?b=2" target="_blank" class="btn btn-small">加入频道</a>
                 </div>
-            </div>
-        </section>
-
-        <!-- 客服信息 -->
-        <section class="customer-service">
-            <h3>💁 客服支持</h3>
-            <div class="qq-info">
-                <div class="qq-item">
-                    <span class="qq-label">客服QQ：</span>
-                    <div>
-                        <!-- 修改：封号中改为在线中 -->
-                        <span class="qq-number">2136162256</span>
-                        <span class="qq-status">(在线中)</span>
+                
+                <!-- 合并的主客服信息 -->
+                <div class="contact-item">
+                    <span class="icon">💁</span>
+                    <h3>主客服QQ</h3>
+                    <p>业务咨询与主用联系方式</p>
+                    <div style="margin: 15px 0; font-size: 1.1em;">
+                        <strong style="color: #3b82f6;">2136162256</strong>
+                        <span style="color: #10b981; font-size: 0.9em; margin-left: 8px;">(在线中)</span>
                     </div>
+                    <a href="https://qm.qq.com/q/6EZsPrAyHe" target="_blank" class="btn btn-small" style="margin-top: 5px;">联系主客服</a>
                 </div>
-                <div class="qq-item">
-                    <span class="qq-label">备用客服QQ：</span>
-                    <div>
-                        <span class="qq-number">3655956249</span>
-                        <span class="qq-status">(临时客服)</span>
+                
+                <!-- 合并的备用客服信息 -->
+                <div class="contact-item">
+                    <span class="icon">🛡️</span>
+                    <h3>备用客服QQ</h3>
+                    <p>当主客服无法响应时使用</p>
+                    <div style="margin: 15px 0; font-size: 1.1em;">
+                        <strong style="color: #3b82f6;">3655956249</strong>
+                        <span style="color: #94a3b8; font-size: 0.9em; margin-left: 8px;">(临时客服)</span>
                     </div>
-                </div>
-                <!-- 新增：联系主客服按钮 -->
-                <div style="margin-top: 15px; display: flex; flex-direction: column; gap: 10px;">
-                    <a href="https://qm.qq.com/q/6EZsPrAyHe" target="_blank" class="btn">联系主客服</a>
-                    <a href="https://qm.qq.com/q/QrtGXiCQIS" target="_blank" class="btn btn-warning">联系备用客服</a>
+                    <a href="https://qm.qq.com/q/QrtGXiCQIS" target="_blank" class="btn btn-small btn-warning" style="margin-top: 5px;">联系备用客服</a>
                 </div>
             </div>
         </section>
